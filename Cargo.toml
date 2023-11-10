@@ -1,0 +1,11 @@
+[package]
+name = "doomsayer"
+version = "0.1.0"
+edition = "2021"
+authors = ["David \"Dregel\" Bengtsson <david@witchcult.se>"]
+description = "A simple logger, written in Rust."
+keywords = ["logging", "game", "log"]
+license ="MIT"
+repository = "https://github.com/WitchcultGames/doomsayer"
+
+[dependencies]
