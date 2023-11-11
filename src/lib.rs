@@ -1,14 +1,13 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+pub enum LogLevel {
+    Info,
+    Warning,
+    Error,
+    Fatal,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+#[macro_export]
+macro_rules! log {
+    ($level:expr, $message:expr) => {
+        println!("[{}] [{}:{}:{}] - {}", stringify!($level), file!(), line!(), column!(), $message);
     }
 }
